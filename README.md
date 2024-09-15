@@ -16,7 +16,7 @@
 
    ```bash
    git clone https://github.com/your-repo/project.git
-   cd project
+   cd project_name
    ```
 
 2. Установите зависимости:
