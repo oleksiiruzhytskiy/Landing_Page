@@ -1,0 +1,51 @@
+@import './mixins';
+@import '_colors';
+@import '_fonts';
+
+.benefits {
+  background-color: $white-color;
+  padding: 20px 20px;
+  text-align: center;
+
+  .benefits__title {
+    margin-bottom: 20px;
+    font-size: $font-size-xlarge;
+
+    @include mobile {
+      font-size: $font-size-large;
+    }
+  }
+
+  .benefits__list {
+    list-style-type: none;
+    padding: 0;
+    @include to-flex-direction-center;
+  }
+
+  .benefits__item {
+    position: relative;
+    font-size: $font-size-medium;
+    margin: 10px 0;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transition: all 0.3s;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+
+    @include mobile {
+      font-size: $font-size-small;
+    }
+  }
+}
