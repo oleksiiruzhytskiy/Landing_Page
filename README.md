@@ -15,7 +15,7 @@
 1. Клонируйте репозиторий на свой компьютер:
 
    ```bash
-   git clone https://github.com/your-repo/project.git
+   git clone https://github.com/oleksii201987/Landing_page.git
    cd project
    ```
 
