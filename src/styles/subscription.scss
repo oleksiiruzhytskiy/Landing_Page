@@ -1,0 +1,91 @@
+@import "./mixins";
+@import "_colors";
+@import "_fonts";
+
+.subscription-form {
+  background-color: $primary-color;
+  color: $white-color;
+  padding: 50px 20px;
+  text-align: center;
+  .subscription-form__title {
+    margin-bottom: 20px;
+    font-size: $font-size-xlarge;
+
+    @include mobile {
+      font-size: $font-size-large;
+    }
+  }
+
+  .subscription-form__form {
+    text-align: left;
+    width: 100%;
+    @include mobile {
+      width: 100%;
+    }
+    @include desktop {
+      text-align: center;
+    }
+    @include large-desktop {
+      @include to-flex-direction-center;
+    }
+
+    .subscription-form__input {
+      padding: 10px;
+      font-size: $font-size-small;
+      margin: 10px 0;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        border-color: $border-color-focus;
+      }
+
+      &:focus {
+        background-color: $background-color-input-focus;
+      }
+
+      @include mobile {
+        font-size: $font-size-small;
+      }
+      @include desktop {
+        width: 50%;
+      }
+      @include large-desktop {
+        width: 50%;
+      }
+    }
+
+    .subscription-form__button {
+      padding: 15px 30px;
+      background-color: $white-color;
+      color: $primary-color;
+      font-size: $font-size-medium;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+
+      &:hover {
+        background-color: #0056b3;
+        color: white;
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+      }
+
+      @include mobile {
+        font-size: $font-size-small;
+        padding: 12px 25px;
+      }
+      @include desktop {
+        width: 50%;
+      }
+      @include large-desktop {
+        width: 30%;
+      }
+    }
+  }
+}

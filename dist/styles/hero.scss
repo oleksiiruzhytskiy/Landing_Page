@@ -1,0 +1,65 @@
+@import './_mixins';
+@import '_colors';
+@import '_fonts';
+.hero {
+  background-color: $primary-color;
+  color: $white-color;
+  text-align: center;
+  padding: 100px 20px;
+
+  .hero__title {
+    font-size: $font-size-xxxlarge;
+
+    @include mobile {
+      font-size: $font-size-xxlarge;
+    }
+
+    @include tablet {
+      font-size: $font-size-xxlarge;
+    }
+  }
+
+  .hero__description {
+    font-size: $font-size-large;
+
+    @include mobile {
+      font-size: $font-size-small;
+
+    }
+
+    @include tablet {
+      font-size: $font-size-medium;
+    }
+  }
+
+  .hero__cta-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: $white-color;
+    color: $primary-color;
+    font-size: $font-size-medium;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: #0056b3; 
+      color: white;
+      transform: scale(1.05);  
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    }
+
+    &:focus {
+      outline: none; 
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); 
+    }
+
+    @include mobile {
+      font-size: $font-size-small;
+      padding: 10px 20px;
+    }
+
+    @include tablet {
+      padding: 12px 25px;
+    }
+  }
+}
