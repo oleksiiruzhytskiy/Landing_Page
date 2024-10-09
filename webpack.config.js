@@ -10,6 +10,12 @@ module.exports = {
     filename: "index.js",
     clean: true,
   },
+  performance: {
+    hints: false,
+    maxAssetSize: 512000,
+    maxEntrypointSize: 512000,
+  },
+
   module: {
     rules: [
       {
